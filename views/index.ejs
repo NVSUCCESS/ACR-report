@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ACR Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/23a9c2f16d.js"></script>
+    <!--OUR stylesheet-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      nav{
+        background-color: #3d3d3d;
+        margin-bottom: 20px;
+        height: 40px;
+      }
+      nav a{
+        color: white;
+      }
+      nav a:hover{
+        color: floralwhite;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/score">View Result<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout<span class="sr-only">(current)</span></a>
+        </li>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY, JALANDHAR</h2>
+        </div>
+        <div class="col-12"style="text-align:center;">
+          <h4>Faculty Performance Appraisal Performa</h4>
+        </div>
+        <div class="col-12"style="text-align:center;">
+          <h4>Appraisal Period:	December 19, 2019  to June: 2020</h4>
+        </div>
+      </div>
+    <br><br>
+
+    <!-------------------------Details--------------------------------------------->
+    
+    <form action="/result" method="POST">
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="tid" class="col-form-label"><h6>ID</h6></label>
+          <input type="text" class="form-control" id="tid" name="tid" placeholder="Id">
+        </div>
+        <div class="col-md-6">
+          <label for="firstName" class="col-form-label"><h6>Name</h6></label>
+          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Name">
+        </div>
+        <div class="col-md-6">
+          <label for="designation" class="col-form-label"><h6>Designation</h6></label>
+          <input type="text" class="form-control" id="designation" placeholder="Your Designation"> 
+        </div>
+        <div class="col-md-6">
+          <label for="dept" class="col-form-label"><h6>Department</h6></label>
+          <input type="text" class="form-control" id="dept" placeholder="Department">  
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <button type="button" class="btn btn-dark" id="AddDet">Add Details</button>
+      </div>
+    <br>
+    <table class="table table-bordered table-striped" id="Table1">
+      <thead class="firH">
+        <th colspan="3">
+          Details
+        </th>
+      </thead>
+      <thead>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Department</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <!--**********************************************-->
+    <!---------------------Instructional Element------------------------------------>
+    <div class="row">
+    <div class="col-sm-12">
+      <h5>INSTRUCTIONAL ELEMENT</h5>
+    </div>
+    <div class="col-sm-12">
+      <p><b>(a) </b>Teaching Engagement (One UG Subject (min) per semester is compulsory for a faculty member)<br>[Max marks: 14 for both semesters, Distribution of mark: 01 mark @ 01 hour Lecture/Tutorial class and 0.5 marks @ 01 hour practical class]</p>
+    </div>
+    </div>
+    <br>
+
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="degree" class="col-form-label">
+            Degree
+          </label>
+          <select class="custom-select" id="degree">
+            <option value="select">Select Degree</option>
+            <option value="UG-I">UG-I</option>
+            <option value="UG-II">UG-II</option>
+            <option value="UG-III">UG-III</option>
+            <option value="UG-IV">UG-IV</option>
+            <option value="PG-1">PG-I</option>
+            <option value="PG-II">PG-II</option>
+            <option value="PHD">PHD</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="courses" class="col-form-label">
+            Course Name and Code
+          </label>
+          <select class="custom-select" id="courses">
+            <option>Select</option>
+            <option value="ITPC-303">ITPC-303 Software Engineering Concepts</option>
+            <option value="ITPC-309">ITPC-309 Discrete Mathematics</option>
+            <option value="ITPC-305">ITPC-305 Web Design Technologies</option>
+            <option value="ITPC-057">ITPC-057 Principles of Compiler Design</option>
+            <option value="ITPC- 301">ITPC- 301 Cryptography and Network Security</option>
+            <option value="ITPC-307">ITPC-307 Computer Graphics and Applications</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="typeofCourse"class="col-form-label">Core/Elective</label>
+          <select class="custom-select" id="typeofCourse">
+            <option value="core">Core</option>
+            <option value="elective">Elective</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="students" class="col-form-label">
+            Number of students
+          </label>
+          <input type="text" id="students" class="form-control" placeholder="Number of Students">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label>Weekly Load</label>
+          <div class="row">
+          <div class="col-md-4">
+            <input type="number" id="Lecture" class="form-control"placeholder="Lectures">
+          </div>
+          <div class="col-md-4">
+            <input type="number" id="Tutorial" class="form-control"placeholder="Tutorials"> 
+          </div>
+          <div class="col-md-4">
+            <input type="number" id="Practical" class="form-control"placeholder="Practicals">
+          </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="perShare">
+            Sole/Shared(%age)
+          </label>
+              <input type="text" id="perShare" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label for="years">
+              Offering for how many years?
+            </label>
+            <input type="text" id="years" class="form-control">
+          </div>
+        </div>
+        <br>
+        <div class="form-row">
+          <div class="col-md-2">
+            <label>Students Feedback</label>
+          </div>
+          <div class="col-md-10">
+            <textarea class="form-control" id="feedback"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="form-row">
+          <div class="col-md-2">
+            Add your Teaching Engagement
+          </div>
+            <button type="button" class="btn btn-dark" id="AddEngOdd">
+              Odd Sem
+            </button>
+            <button type="button" class="btn btn-dark" id="AddEngEven">
+              Even Sem
+            </button>
+            <button type="reset" class="btn btn-dark" id="AddRec">Add New Record</button>
+        </div>
+
+    <br><br>
+    <table class="table table-bordered table-striped" id="Table2">
+      <thead class="firH">
+        <th colspan="10" style="text-align: center;">Odd Semester (July to December)</th>
+      </thead>
+      <thead>
+        <tr>
+          <th>Degree name</th>
+          <th>Course No. and Title</th>
+          <th>Core/Elective</th>
+          <th>No. of students</th>
+          <th>Lecture</th>
+          <th>Tutorial</th>
+          <th>Practical</th>
+          <th>Sole/Shared(%age)</th>
+          <th>Offering for how many years continuously?</th>
+          <th>Student Feedback</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>    
+    <table class="table table-bordered table-striped" id="Table3">
+      <thead class="firH">
+        <th colspan="10" style="text-align: center;">Even Semester (January to June)</th>
+      </thead>
+      <thead>
+        <tr>
+          <th>Degree name</th>
+          <th>Course No. and Title</th>
+          <th>Core/Elective</th>
+          <th>No. of students</th>
+          <th>Lecture</th>
+          <th>Tutorial</th>
+          <th>Practical</th>
+          <th>Sole/Shared(%age)</th>
+          <th>Offering for how many years continuously?</th>
+          <th>Student Feedback</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>   
+    
+    <!------------LIST 1-------------->
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b>*</b>
+          Innovations in teaching (during the reported period):[Max marks 02 @ 01 per innovation] 
+        </p>
+      </div>
+      <div class="col-sm-12">
+          <div class="form-row">
+            <input type="text" id="inno" class="form-control col-sm-10" placeholder="Enter innovation in teaching">
+            <button type="button" class="btn btn-dark" id="AddIno">Add</button>
+            <button type="reset" class="btn btn-dark">New</button>
+          </div>
+        <br>
+      </div>
+      <div class="col-sm-12">
+        <ul class="list1 list-group"></ul>
+      </div>
+    </div>
+    <!------------------------------------>
+    <br><br>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b>*</b>
+          Details of new laboratory/new experiment developed (if any):[02 marks per new laboratory developed/01 mark per new experiment]
+        </p>
+      </div>
+      <div class="col-sm-12">
+          <div class="form-row">
+            <input type="text" id="labexp" class="form-control col-sm-7" placeholder="New Laboratory / Experiment">
+            <button type="button" class="btn btn-dark col-sm-1" id="AddLab">Add Lab</button>
+            <button type="button" class="btn btn-dark col-sm-2" id="AddExp">Add Experiment</button>
+            <button type="reset" class="btn btn-dark col-sm-1">New</button>
+          </div>
+        <br>
+      </div>
+      <div class="col-sm-12">
+        <ul class="list2 list-group"></ul>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b>* </b>Other Instructional Tasks [Max marks: 02 @ 01 mark per Instructional task] <br>(Such as development of Instructional software, Education technology packages (including ETV films, modular courses, practical supervision etc.).</p>
+      </div>
+      <div class="col-sm-12">
+          <div class="form-row">
+            <input type="text" id="insTask" class="form-control col-sm-10" placeholder="Enter an Instructional Task">
+            <button type="button" class="btn btn-dark" id="AddInsT">Add</button>
+            <button type="reset" class="btn btn-dark">New</button>
+          </div>
+        <br>
+      </div>
+      <div class="col-sm-12">
+        <ul class="list3 list-group"></ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b>(b) </b>Project and Thesis (Dissertation) Supervision:  B Tech (max marks: 04)/ PG (max marks: 04)</p>
+      </div>
+    </div>
+      <div class="form-row">
+        <div class="col-sm-6">
+          <label for="project" class="col-form-label">Level</label>
+          <select name="project" id="project" class="custom-select">
+            <option value="Select level">Select Level</option>
+            <option value="BTECH">B.Tech</option>
+            <option value="MTECH">M.Tech/M Sc/MBA</option>
+          </select> 
+        </div>
+        <div class="col-sm-6">
+          <label for="Title" class="col-form-label">
+            Title of Project/Thesis/Dissertation 
+          </label>
+          <input id="Title" type="text" class="form-control"placeholder="Enter Title"> 
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-sm-6">
+          <label for="groups" class="col-form-label">
+            Number of groups/projects
+          </label>
+          <input id="groups" type="number" placeholder="Enter Number of groups/projects"class="form-control">
+        </div>
+        <div class="col-sm-6">
+          <label for="stds" class="col-form-label">
+            Names/Roll Nos  of Students in each group/ project
+          </label>
+          <input id="stds" type="text" class="form-control"placeholder="Enter Number of groups/projects"> 
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-3">
+          <label>Name of other supervisors (if any)</label>
+        </div>
+        <div class="col-md-9">
+          <input id="spvrs" type="text" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <button type="button" class="btn btn-dark" id="AddSuper">
+          Add your Project and Thesis Supervision.
+        </button>
+        <button type="reset" class="btn btn-dark">
+          Clear
+        </button>
+      </div>
+    <br>
+    <table class="table table-bordered table-striped" id="Table4">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Title of Project/Thesis/Dissertation</th>
+          <th>No of groups/projects</th>
+          <th>Names/Roll Nos  of Students in each group/ project</th>
+          <th>Name of other supervisors (if any)</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b>(c) </b>Ph.D Research Supervision
+          <br>
+          [Ph.D. pursuing: 02 marks per Ph.D. student till 03 years of registration, 01 marks per Ph.D. student during 4th and 5th year of registration. No marks shall be awarded for Ph.D. guidance after 05 years of registration, Ph.D. Awarded: 04 marks per Candidate]
+        </p>
+      </div>
+    </div>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label"for="nameofSt">
+            Name of Student
+          </label>
+          <input type="text" class="form-control"id="nameofSt" placeholder="Enter Name">
+        </div>
+        <div class="col-md-6">
+          <label for="regYear"class="col-form-label">
+            Registration Year and Status 
+          </label>
+          <input type="text" class="form-control" id="regYear" placeholder="Enter Registration Year and Status">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="areaofRes"class="col-form-label">
+            Area of Research
+          </label>
+          <input id="areaofRes" type="text" class="form-control" placeholder="Area of Research/Title of thesis undertaken">
+        </div>
+        <div class="col-md-6">
+          <label for="otherSpr"class="col-form-label">
+            Other supervisor (s) (if any), name & department
+          </label>
+          <input id="otherSpr"type="text" class="form-control"placeholder="Enter Name">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label" for="pub">
+            No of publications in Journals during the reported period
+          </label>
+          <input type="text" class="form-control" id="pub">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label"for="status">
+            Current status: 
+          </label>
+          <select class="custom-select" id="status">
+            <option value="Select current status">Select Current Status</option>
+            <option value="Comprehensive done">Comprehensive done</option>
+            <option value="Pre-submission done">Pre-submission done</option>
+            <option value="Thesis submitted">Thesis submitted</option>
+            <option value="Awarded">Awarded</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-sm-12">
+        <button type="button" class="btn btn-dark" id="AddPSpr">Add PHD Supervision</button>
+      <button type="reset" class="btn btn-dark">
+        Clear
+      </button>
+      </div>
+      </div>  
+
+    <br><br>
+    <table class="table table-bordered table-striped"id="Table5">
+      <thead>
+        <th>Name of Student</th>
+        <th>Registration Year and Status </th>
+        <th> Area of Research</th>
+        <th>Other supervisor (s) (if any), name & department</th>
+        <th>No of publications in Journals during the reported period</th>
+        <th> Current status:</th>
+      </thead>
+    </table>
+
+    <!-------------------------Research Papers/ Publications---------------->
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>RESEARCH PAPERS/PUBLICATIONS	[Max. marks: 30]</h5>
+      </div>
+      <div class="col-sm-12">
+        <p><b>(a) 
+          Referred  Journal Papers (Accepted/Published during the report period)
+          </b>
+          <br>
+          [01 mark per paper accepted for publication in SCI journal and
+          02 marks at the time of its publication/online, 01 mark per paper accepted
+          for publication in SCOPUS journal and 01 mark at the time of its publication/online,
+          01 mark per paper published in other unpaid peer reviewed journals, no marks for other journals/paid journals]
+        </p>
+      </div>
+    </div>
+    <br><br>
+
+    <div class="form-row">
+      <div class="col-md-6">
+        <label class="col-form-label"for="det">
+          Authors names,Title, Name of journal, Vol. No., Page nos
+        </label>
+        <input type="text" class="form-control"id="det"placeholder="Details of paper">
+      </div>
+      <div class="col-md-3">
+        <label class="col-form-label" for="index">
+          Please mention indexed with:
+        </label>
+        <select name="Indexed With" id="index" class="custom-select">
+          <option value="Indexed With">Indexed With</option>
+          <option value="SCIacc">Accepted for publication in SCI</option>
+          <option value="SCIpub">Published in SCI</option>
+          <option value="SCI & web of science">Science & web of science</option>
+          <option value="Web of science">Web of science</option>
+          <option value="SCOPUSacc">Accepted for publication in SCOPUS</option>
+          <option value="SCOPUSpub">Published in SCOPUS</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="col-form-label">
+          Paid/Unpaid
+        </label>
+        <select id="paUp" class="custom-select">
+          <option value="select">Select</option>
+          <option value="paid">Paid</option>
+          <option value="unpaid">Unpaid</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-md-2">
+        <label class="col-form-label"for="co-auth">
+          Names of co-authors
+        </label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control"id="co-auth"placeholder="Co-authors">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-sm-12">
+      <button type="button" class="btn btn-dark" id="AddJou">Submit Details</button>
+      <button type="reset" class="btn btn-dark">
+        Clear
+      </button>
+      </div>
+    </div>
+
+    <table class="table table-bordered table-striped"id="Table6">
+      <thead>
+        <th>Details of paper:Authors names (sequence as in paper), Title of paper, Name of Conference, (Year), Page nos of proceedings</th>
+        <th>Please mention indexed with:SCI & Web of Science/SCI/SCOPUS/not indexed</th>
+        <th>Names of co-authors</th>
+      </thead>
+    </table>
+    <!--***************-->
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b> 
+          (b)	Refereed Conference Research Papers (Published during the report period) 
+          </b>
+          <br>
+          [01 mark per paper published in international conference indexed with SCOPUS, 0.5 marks per paper for other Conferences], {Session Chair: additional 01 mark (max), Best paper: additional 02 marks (max)}: Marks shall be applicable if the paper has been presented in the conference by one of the authors.
+        </p>
+      </div>
+    </div>
+    <br><br>
+    <!--<form>-->
+    <div class="form-row">
+      <div class="col-md-6">
+        <label class="col-form-label"for="det1">
+          Authors names,Title, Name of journal, Vol. No., Page nos
+        </label>
+        <input type="text" class="form-control"id="det1"placeholder="Details of paper">
+      </div>
+      <div class="col-md-6">
+        <label class="col-form-label" for="index1">
+          Please mention indexed with:
+          SCI & Web of Science/SCI/SCOPUS/not paid
+        </label>
+        <select name="Indexed With" id="index1" class="custom-select">
+          <option value="Indexed With">Indexed With</option>
+          <option value="SCI">SCI</option>
+          <option value="SCI & web of science">Science & web of science</option>
+          <option value="Web of science">Web of science</option>
+          <option value="SCOPUS">SCOPUS</option>
+          <option value="not paid">not paid</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-md-2">
+        <label class="col-form-label"for="co-auth1">
+          Names of co-authors
+        </label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control"id="co-auth1"placeholder="Co-authors">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-sm-12">
+      <button type="button" class="btn btn-dark" id="AddCon">Submit Details</button>
+      <button type="reset" class="btn btn-dark">
+        Clear
+      </button>
+      </div>
+    </div>
+    <table class="table table-bordered table-striped"id="Table6">
+      <thead>
+        <th>Details of paper:Authors names (sequence as in paper), Title of paper, Name of Conference, (Year), Page nos of proceedings</th>
+        <th>Please mention indexed with:SCI & Web of Science/SCI/SCOPUS/not indexed</th>
+        <th>Names of co-authors</th>
+      </thead>
+    </table>
+  <!--**************************-->
+  <div class="row">
+    <div class="col-sm-12">
+      <p><b>(c)	Books, Monographs, Lab or Design manuals </b>
+      <br>
+      Authored/ Edited [Max marks: 04: 02+02)<br>
+      [01 mark for each Chapter authored/edited with max 02 marks, 02 marks for the Book authored]
+    </p>
+    </div>
+  </div>
+    <!--<form>-->
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label" for="auth">
+            Authors names 
+          </label>
+          <input type="text" class="form-control"id="auth"placeholder="authors">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label"for="title1">
+            Title, Publishers
+          </label>
+          <input type="text" class="form-control"id="title1"placeholder="Title,Publishers">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label"for="vol">
+            Vol No., (Year) Page nos
+          </label>
+          <input type="text" class="form-control"id="vol">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label">
+            Authored/Edited
+          </label>
+          <select class="custom-select" id="edit">
+            <option>Select</option>
+            <option value="authored">Authored</option>
+            <option value="Edited">Edited</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-sm-12">
+        <button type="button" class="btn btn-dark" id="AddBook">Submit Details</button>
+        <button type="reset" class="btn btn-dark">
+          Clear
+        </button>
+        </div>
+      </div>
+    <table class="table table-bordered table-striped"id="Table7">
+      <thead>
+        <th>Authors names (same order as in publication)</th>
+        <th>Title, Publishers</th>
+        <th>Vol No., (Year) Page nos</th>
+        <th>Authored/Edited</th>
+      </thead>
+    </table>
+    <!--****************-->
+    <div class="row">
+      <div class="col-sm-12">
+        <p><b>(d)	Technical Reports (External & Internal):</b>
+        <br>
+        [01 mark for each Report with max. 02 marks]
+        </p>
+      </div>
+    </div>
+    <!--<form>-->
+      <div class="form-row">
+        <div class="col-md-6">
+        <label class="col-form-label"for="title2">
+          Title of Report
+        </label>
+        <input type="text" class="form-control"placeholder="Title of report"id="title2">
+      </div>
+      <div class="col-md-6">
+        <label class="col-form-label"for="prt">
+          Particulars (sponsored R & D / Consultancy/ status reports etc.)
+        </label>
+        <input type="text" class="form-control"id="prt"placeholder="Particulars">
+      </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+        <label class="col-form-label"for="auth2">
+          Authors
+        </label>
+        <input type="text" class="form-control"placeholder="Enter Authors"id="auth2">
+      </div>
+      <div class="col-md-6">
+        <label class="col-form-label"for="remarks">
+          Remarks
+        </label>
+        <input type="text" class="form-control"id="remarks"placeholder="Remarks(ext/int report)">
+      </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-sm-12">
+        <button type="button" class="btn btn-dark" id="AddTechRep">Submit Details</button>
+        <button type="reset" class="btn btn-dark">
+          Clear
+        </button>
+        </div>
+      </div>
+    <table class="table table-bordered table-striped"id="Table8">
+      <thead>
+        <th>Title of Report</th>
+        <th>Particulars (sponsored R & D / Consultancy/ status reports etc.)</th>
+        <th>Authors</th>
+        <th>Remarks</th>
+      </thead>
+    </table>
+    <!--***************-->
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>SPONSORED R & D CONSULTANCY & EXTENSION ELEMENTS [Max. marks: 16]</h5>
+      </div>
+      <div class="col-sm-12">
+        <p><b>(a)	Sponsored Research Projects: </b>
+        <br>
+        (Project under TEQIP/Institute grant shall not be considered for marks): 02 marks for completion of each sponsored research project with grant more than 05 lacs during the period of reporting otherwise 02 mark for its ongoing status, 0.5 marks for sponsored project from any govt agency/Industry with grant less than 05 lacs and also for the ongoing status of such project)
+        </p>
+      </div>
+    </div>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label"for="titleproject">Title of Project</label>
+          <input type="text" id="titleproject"class="form-control"placeholder="Project Name">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label"for="fundagency">Funding Agency</label>
+          <input type="text" class="form-control"id="fundagency"placeholder="Agency Name">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label"for="finoutlay">Financial Outlay</label>
+          <input type="text" class="form-control"id="finoutlay"placeholder="Financial Outlay">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label"for="startyear">Year of Start & Total period</label>
+          <input type="text" class="form-control"id="startyear"placeholder="Year">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-6">
+          <label class="col-form-label"for="pi_name">Name of P.I and other Investigators </label>
+          <input type="text" class="form-control" placeholder="Enter here"id="pi_name">
+        </div>
+        <div class="col-md-6">
+          <label class="col-form-label"for="statproject" >Status of project </label>
+          <select name="Status" id="statproject" class="custom-select">
+            <option value="Status">Status</option>
+            <option value="Started">Started</option>
+            <option value="Ended">Ended</option>
+            <option value="In Progress">In Progress</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-sm-12">
+        <button type="button" class="btn btn-dark" id="AddRerPro">Add Project</button>
+        <button type="reset" class="btn btn-dark">
+          Clear
+        </button>
+        </div>
+      </div>
+
+    <table class="table table-bordered table-striped"id="Table9">
+      <thead>
+        <th>Title of project</th>
+        <th>Funding Agency</th>
+        <th>Financial Outlay</th>
+        <th>Year of Start & Total period</th>
+        <th>Name of P.I and other Investigators</th>
+        <th>Status of Project</th>
+      </thead>
+    </table>
+  <!--*******************************-->
+  <div class="row">
+    <div class="col-sm-12">
+      <p><b>(b) Consultancy Projects: </b>
+      <br>Max 10 marks for cumulative 05 lacs @ 01 mark for cumulative Rs 50,000/-  during the period of reporting .
+      </p>
+    </div>
+  </div>
+
+    <div class="form-row">
+      <div class="col-md-6">
+        <label class="col-form-label"for="titleproject1">Title of Project</label>
+        <input type="text" id="titleproject1"class="form-control"placeholder="Project Name">
+      </div>
+      <div class="col-md-6">
+        <label class="col-form-label"for="fundagency1">Funding Agency</label>
+        <input type="text" class="form-control"id="fundagency1"placeholder="Agency Name">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-md-6">
+        <label class="col-form-label"for="finoutlay1">Financial Outlay</label>
+        <input type="text" class="form-control"id="finoutlay1"placeholder="Financial Outlay">
+      </div>
+      <div class="col-md-6">
+        <label class="col-form-label"for="startyear1">Year of Start & Total period</label>
+        <input type="text" class="form-control"id="startyear1"placeholder="Year">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-md-6">
+        <label class="col-form-label"for="pi_name1">Name of P.I and other Investigators </label>
+        <input type="text" class="form-control" placeholder="Enter here"id="pi_name1">
+      </div>
+      <div class="col-md-6">
+        <label class="col-form-label"for="statproject1" >Status of project </label>
+        <select name="Status" id="statproject1" class="custom-select">
+          <option value="Status">Status</option>
+          <option value="Started">Started</option>
+          <option value="Ended">Ended</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-sm-12">
+      <button type="button" class="btn btn-dark" id="AddConPro">Add Project</button>
+      <button type="reset" class="btn btn-dark">
+        Clear
+      </button>
+      </div>
+    </div>
+
+  <table class="table table-bordered table-striped"id="Table10">
+    <thead>
+      <th>Title of project</th>
+      <th>Funding Agency</th>
+      <th>Financial Outlay</th>
+      <th>Year of Start & Total period</th>
+      <th>Name of P.I and other Investigators</th>
+      <th>Status of Project</th>
+    </thead>
+  </table>
+<!--***************************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(c)	Products/ Processes/ Development and Technology Transfer/ Patents: </b>
+    <br>(Give particulars with names of group members involved)
+    [05 marks for award of each patent, 02 marks for filing of each patent]    
+    </p>
+  </div>
+</div>
+
+  <div class="form-row">
+    <div class="col-md-8">
+      <label class="col-form-label"for="patents">Enter any Product/Process Development/Patents</label>
+      <input type="text" id="patents"class="form-control"placeholder="Products/ Processes/ Development and Technology Transfer/ Patents">
+    </div>
+    <div class="col-md-4">
+      <label class="col-form-label">Awarded/Filed</label>
+      <select class="custom-select" id="awafi">
+        <option>Select</option>
+        <option value="Awarded">Awarded</option>
+        <option value="Filed">Filed</option>
+      </select>
+    </div>
+    <br>
+    <div class="col-md-12">
+      <label class="col-form-label"for="grpMem">Names of other Group Members involved:</label>
+      <input type="text" class="form-control"id="grpMem"placeholder="Enter names">
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col-sm-12">
+    <button type="button" class="btn btn-dark" id="AddPatent">Submit Details</button>
+    <button type="reset" class="btn btn-dark">
+      Clear
+    </button>
+    </div>
+  </div>
+
+<table class="table table-bordered table-striped"id="Table11">
+  <thead>
+    <th>Products/ Processes/ Development/ Patents:</th>
+    <th>Other Group Members involved</th>
+  </thead>
+</table>
+<!--************************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(d)	Continuing Education/QIP Short Term Lectures/ Special Lectures: </b>
+    <br>
+    [Max 02 marks @ 01 mark per lecture delivered]
+    </p>
+  </div>
+</div>
+
+  <div class="form-row">
+    <div class="col-md-6">
+      <label class="col-form-label"for="titlelec">Title of Lecture/ Lecture Series</label>
+      <input type="text" id="titlelec"class="form-control"placeholder="Title of Lecture">
+    </div>
+    <div class="col-md-6">
+      <label class="col-form-label"for="dplace">Date, Place and Programme where lectures delivered</label>
+      <input type="text" class="form-control"id="dplace"placeholder="Lecture Delivery place, date">
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col-md-12">
+      <label class="col-form-label"for="info">Other Relevant Information</label>
+      <input type="text" class="form-control"id="info"placeholder="Other Information">
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col-sm-12">
+    <button type="button" class="btn btn-dark" id="AddLec">Submit Details</button>
+    <button type="reset" class="btn btn-dark">
+      Clear
+    </button>
+    </div>
+  </div>
+
+<table class="table table-bordered table-striped"id="Table12">
+  <thead>
+    <th>Title of Lecture/ Lecture Series</th>
+    <th>Date, Place and Programme where lectures delivered</th>
+    <th>Other Relevant Information</th>
+  </thead>
+</table>
+<!--*************************-->
+<div class="row">
+  <div class="col-sm-12">
+    <h5>ORGANIZATION/PARTICIPATION OF COURSES/CONFERENCES/SEMINAR/ WORKSHOP AND OTHER EXTENSION WORKS [Max. marks: 13]<br></h5>
+  </div>
+  <br><br><br>
+  <div class="col-sm-12">
+    <p><b>(a) Organization of Courses/ Conferences 
+      </b>
+      <br>[02 marks for each international conference or sponsored STC/MDP/Self sponsored Course, otherwise 01 mark for each national conference/ workshop/expert lecture by eminent person]
+    </p>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col-md-8">
+    <label class="col-form-label"for="conf1">
+      Name of Conference/Course
+    </label>
+    <input type="text" class="form-control"id="conf1"placeholder="Course/Conf.">
+  </div>
+  <div class="col-md-4">
+    <label class="col-form-label"for="conftype">
+      Conference Type
+    </label>
+    <select class="custom-select" id="conftype">
+      <option>Select</option>
+      <option value="international">International</option>
+      <option value="national">National (Webinar/Expert Talk)/</option>
+      <option value="stcmdp">Sponsored STC/MDP</option>
+    </select>
+  </div>
+</div>
+<div class="form-row">
+  <div class="col-md-6">
+    <label class="col-form-label" for="sponser">
+      Sponsered By:
+    </label>
+    <input id="sponser" type="text" class="form-control"placeholder="Sponsered by">
+  </div>
+  <div class="col-md-6">
+    <label class="col-form-label" for="date2">
+      Dates
+    </label>
+    <input id="date2" type="text" class="form-control"placeholder="Date">
+  </div>
+</div>
+<br>
+<div class="form-row">
+  <div class="col-sm-12">
+  <button type="button" class="btn btn-dark" id="AddCourse">Submit Details</button>
+  <button type="reset" class="btn btn-dark">
+    Clear
+  </button>
+  </div>
+</div>
+<!--</form>-->
+<table class="table table-bordered table-striped"id="Table13">
+  <thead>
+    <th>Name of the Conf./Course.</th>
+    <th>Sponsered By</th>
+    <th>Dates</th>
+  </thead>
+</table>
+<!--************************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(b)	Participation  in Short Term Courses  
+      </b>
+      <br>[Max 02 marks @ 01 mark per STC/MDP outside NIT Jalandhar , max 01 mark @ 01 mark per STC/MDP in NIT Jalandhar ]
+    </p>
+  </div>
+</div>
+<!--<form>-->
+<div class="form-row">
+  <div class="col-md-8">
+    <label class="col-form-label"for="conf1a">
+      Name of Conference/Course
+    </label>
+    <input type="text" class="form-control"id="conf1a"placeholder="Course/Conf.">
+  </div>
+  <div class="col-md-4">
+    <label class="col-form-label" for="typeconf1a">
+      Location
+    </label>
+    <select class="custom-select" id="typeconf1a">
+      <option value="Select">Select</option>
+      <option value="inside">NITJ</option>
+      <option value="Outside">Outside NITJ</option>
+    </select>
+  </div>
+</div>
+<div class="form-row">
+  <div class="col-md-6">
+    <label class="col-form-label" for="sponser1">
+      Sponsered By:
+    </label>
+    <input id="sponser1" type="text" class="form-control"placeholder="Sponsered by">
+  </div>
+  <div class="col-md-6">
+    <label class="col-form-label" for="date3">
+      Dates
+    </label>
+    <input id="date3" type="text" class="form-control"placeholder="Date">
+  </div>
+</div>
+<br>
+<div class="form-row">
+  <div class="col-sm-12">
+  <button type="button" class="btn btn-dark" id="AddPart">Submit Details</button>
+  <button type="reset" class="btn btn-dark">
+    Clear
+  </button>
+  </div>
+</div>
+<!--</form>-->
+<table class="table table-bordered table-striped"id="Table14">
+  <thead>
+    <th>Name of the Conf./Course.</th>
+    <th>Sponsered By</th>
+    <th>Dates</th>
+  </thead>
+</table>
+<!--*******************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(c)	Visit to Outside Institute/ Organization other than delivering expert lecture
+      </b>
+      <br>[01 mark per visit, max 02 marks]
+    </p>
+  </div>
+</div>
+<!--<form>-->
+<div class="form-row">
+  <div class="col-md-12">
+    <label class="col-form-label"for="inst1">
+      Institute/Organization Visited
+    </label>
+    <input type="text" class="form-control"id="inst1"placeholder="Institute Visited">
+  </div>
+</div>
+<div class="form-row">
+  <div class="col-md-6">
+    <label class="col-form-label" for="visit">
+      Purpose of Visit
+    </label>
+    <input id="visit" type="text" class="form-control"placeholder="Sponsered by">
+  </div>
+  <div class="col-md-6">
+    <label class="col-form-label" for="date4">
+      Dates
+    </label>
+    <input id="date4" type="text" class="form-control"placeholder="Date">
+  </div>
+</div>
+<br>
+<div class="form-row">
+  <div class="col-sm-12">
+  <button type="button" class="btn btn-dark" id="AddVisit">Submit Details</button>
+  <button type="reset" class="btn btn-dark">
+    Clear
+  </button>
+  </div>
+</div>
+<!--</form>-->
+<table class="table table-bordered table-striped"id="Table15">
+  <thead>
+    <th>Inst./Organization Visited</th>
+    <th>Purpose of Visit</th>
+    <th>Dates of Visit</th>
+  </thead>
+</table>
+<!--********************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(d)	Other Extension Tasks (outside NIT Jalandhar)
+      </b>
+      <br>( Such as involvement with outside institutes -  Network / Joint Projects, International  &  National Academics, Professional Societies, Industry / Govt./ Public/ Community Service, Editorial & Renewing work, Editing of proceedings, Development of national code of standards, members of advisory committee/BOS/Senate/BOG/professional bodies/Governing Council/Selection Committees outside NIT Jalandhar/Chief Guest outside NIT Jalandhar/Editorship of journal/Reviewer of journal, membership of Professional bodies/award/recognition etc.)
+      <br>
+      [Maximum 05 marks @ 01 mark per activity]
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>*</b>
+      Enter any other Extension Tasks(Outside NIT Jalandhar)
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <!--<form class="Extension">-->
+      <div class="form-row">
+        <input type="text" id="extent" class="form-control col-sm-10" placeholder="Enter tasks">
+        <button type="button" class="btn btn-dark" id="AddExtTask">Add</button>
+        <button type="reset" class="btn btn-dark">New</button>
+      </div>
+    <!--</form>-->
+    <br>
+  </div>
+  <div class="col-sm-12">
+    <ul class="list4 list-group"></ul>
+  </div>
+</div>
+<!--************************-->
+<div class="row">
+  <div class="col-sm-12" style="margin-top: 100px;">
+    <h5>MANGEMENT & INSTITUTIONAL DEVELOPMENT ELEMENTS [Max. marks: 09]</h5>
+  </div>
+  <br>
+  <div class="col-sm-12">
+    <p><b>(a)	Department./ Centre’s Level:  
+      </b>
+      <br>[Maximum 02 marks @ 01 mark per activity]
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>*</b>
+      Enter any Department/Centre's Level Responsibility:
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <!--<form class="Extension">-->
+      <div class="form-row">
+        <input type="text" id="deptr" class="form-control col-sm-10" placeholder="Enter tasks">
+        <button type="button" class="btn btn-dark" id="AdddeptRes">Add</button>
+        <button type="reset" class="btn btn-dark">New</button>
+      </div>
+    <!--</form>-->
+    <br>
+  </div>
+  <div class="col-sm-12">
+    <ul class="list5 list-group"></ul>
+  </div>
+</div>
+<!--***************************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(b)	Institute Level 
+      </b>
+      <br>[05 marks for Dean, HOD, Associate Dean, Chief Warden, Deputy Chief Warden, TEQIP Coordinator]
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>*</b>
+      Enter any Institute Level Responsibility:
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <!--<form>-->
+      <div class="form-row">
+        <input type="text" id="insr" class="form-control col-sm-10" placeholder="Enter Responsibility">
+        <button type="button" class="btn btn-dark" id="AddInsRes">Add</button>
+        <button type="reset" class="btn btn-dark">New</button>
+      </div>
+    <!--</form>-->
+    <br>
+  </div>
+  <div class="col-sm-12">
+    <ul class="list6 list-group"></ul>
+  </div>
+</div>
+<!--**************************-->
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>(c)	Other assignments: 
+      </b>
+      <br>(Incharge of facility/group, chairmanship and memberships of committees, involvement in student services/activities, Institute community and administrative assignments, CSAB, CCMT, CCMN, various external examinations held as NIT Jalandhar as Centre.)<br>
+      [Maximum 02 marks @ 01 mark per activity]
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>*</b>
+      Enter any Other Assignments:
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <!--<form>-->
+      <div class="form-row">
+        <input type="text" id="othAss" class="form-control col-sm-10" placeholder="Enter assignments">
+        <button type="button" class="btn btn-dark" id="AddOthAss">Add</button>
+        <button type="reset" class="btn btn-dark">New</button>
+      </div>
+    <!--</form>-->
+    <br>
+  </div>
+  <div class="col-sm-12">
+    <ul class="list7 list-group"></ul>
+  </div>
+</div>
+<!--************SECTION 6******************-->
+<div class="row">
+  <div class="col-sm-12" style="margin-top: 100px;">
+    <h5>OTHER WORKS</h5>
+  </div>
+  <div class="col-sm-12">
+    <p><b>(not included in the form above: Assigned by the Director: 02 marks @ 01 mark per assignment)	
+      </b>
+      <br>[Max. marks : 02]
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <p><b>*</b>
+      Enter any Other Work:
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <!--<form>-->
+      <div class="form-row">
+        <input type="text" id="othWork" class="form-control col-sm-10" placeholder="Enter work">
+        <button type="button" class="btn btn-dark" id="AddOthWork">Add</button>
+        <button type="reset" class="btn btn-dark">New</button>
+      </div>
+    <!--</form>-->
+    <br>
+  </div>
+  <div class="col-sm-12">
+    <ul class="list8 list-group"></ul>
+  </div>
+</div>
+<!--***************************-->
+<div class="row">
+  <div class="col-sm-12" style="margin-top: 50px;">
+    <h5>SELF APPRAISAL </h5>
+  </div>
+  <div class="col-sm-12">
+    <p>(Comments on the work including particulars of circumstances for not being able to undertake activities in some elements)</p>
+  </div>
+  <div class="col-sm-12">
+    <textarea class="form-control"id="area1"></textarea>
+  </div>
+</div>
+<!--***************************-->
+<div class="row">
+  <div class="col-sm-12" style="margin-top: 50px;">
+    <h5>COMMENTS/ SUGGESTIONS FOR FUTURE WORK</h5>
+  </div>
+  <div class="col-sm-12">
+    <p>(Including difficulties faced, if any, and suggestions for improvement, training, infrastructure etc. for professional growth and for achievement of excellence)</p>
+  </div>
+  <div class="col-sm-12">
+    <textarea class="form-control" id="area2"></textarea>
+  </div>
+</div>
+<div class="col-sm-12">
+<button type="button" class="btn btn-dark" id="result">Show Marks</button>  
+<table class="table table-bordered table-striped"id="ResultTable">
+  <thead>
+    <th>S.No</th>
+    <th>Component</th>
+    <th>Max. Marks</th>
+    <th>Marks Obtained</th>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+
+<div class="row">
+  <div class="col-sm-2">
+    <label>Grand Total</label>
+  </div>
+  <div class="col-sm-4">
+  <input type="text"name="gt"id="gt"class="form-control"readonly="true">
+  </div>
+  <div class="col-sm-4">
+    <input type="submit"value="SUBMIT"class="btn btn-dark">
+  </div>
+</div>
+</form>
+</div>
+  <!--Bootstrap dependencies-->
+  <script src="assets/jquery.slim.min.js"></script>
+  <script src="assets/popper.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="score.js"></script>
+  </body>
+</html>

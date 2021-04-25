@@ -1,0 +1,33 @@
+{
+  "name": "acr_report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.html",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvaniBajpai/ACR_REPORT.git"
+  },
+  "author": "\"Avani Bajpai\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvaniBajpai/ACR_REPORT/issues"
+  },
+  "homepage": "https://github.com/AvaniBajpai/ACR_REPORT#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jquery": "^3.5.1",
+    "mysql": "^2.18.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}

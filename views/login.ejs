@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ACR Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/23a9c2f16d.js"></script>
+    <!--OUR stylesheet-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+  <div class="container">
+  <h1 style="margin-top: 150px;" class="offset-md-3">LOGIN</h1><br>
+    <form action="/login" method="POST">
+      <div class="form-row">
+        <div class="col-md-2 offset-md-3">
+          <label for="loginId "class="col-form-label">Enter your ID</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="loginId" name="loginId" class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col-md-2 offset-md-3">
+          <label for="paswd"class="col-form-label">Password</label>
+        </div>
+        <div class="col-md-3">
+          <input type="password" id="paswd" name="paswd" class="form-control">  
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <input type="submit" value="LOGIN"class="offset-md-3 btn btn-dark">
+      </div>
+    </form>
+    </div>
+  <!--Bootstrap dependencies-->
+  <script src="assets/jquery.slim.min.js"></script>
+  <script src="assets/popper.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+  </body>
+</html>

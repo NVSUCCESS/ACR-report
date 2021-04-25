@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ACR Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/23a9c2f16d.js"></script>
+    <!--OUR stylesheet-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      table{
+        margin-top:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <table class="table table-bordered table-striped">
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th><%=name%></th>
+          </tr>
+        <tr>
+        <th>Your Score</th>
+        <th><%=data%></th>
+        </tr>
+      </tbody>
+      </table>
+      <a href="/home">Go to home page</a>
+      </div>
+    <!--Bootstrap dependencies-->
+  <script src="assets/jquery.slim.min.js"></script>
+  <script src="assets/popper.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+  </body>
+</html>
